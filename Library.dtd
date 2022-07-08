@@ -1,0 +1,76 @@
+<!ELEMENT Libraries (library)*>
+<!ELEMENT library (library_name, personnel*, authors*, books*, copies*,users*, loans*) >
+
+<!ATTLIST library 
+	library_id ID #REQUIRED
+	phone CDATA #REQUIRED
+	email CDATA #REQUIRED
+	library_address CDATA #IMPLIED>
+<!ELEMENT library_name (#PCDATA)>
+
+<!ELEMENT personnel (employee*)>
+<!ELEMENT employee (full_name, p_details?)>
+<!ATTLIST employee 
+	em_id ID #REQUIRED
+	em_category (permanent|contractor) #IMPLIED>
+<!ELEMENT full_name (#PCDATA)>
+<!ELEMENT p_details (gender, full_address?, phone*, email*, date_of_birth?, maritial_status?, children?) >
+<!ELEMENT gender (#PCDATA)>
+<!ATTLIST gender
+          gen (F | M | O) "O">
+<!ELEMENT full_address (address, number, zip, city)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT date_of_birth (#PCDATA)>
+<!ELEMENT maritial_status (#PCDATA)*>
+<!ATTLIST maritial_status 
+	m_s (Y|N) "N" >
+<!ELEMENT children (#PCDATA)*>
+<!ATTLIST children
+	chil (Y|N) "N" >
+
+<!ELEMENT authors (author*)>
+<!ELEMENT author (full_name)>
+<!ATTLIST author 
+        id ID #REQUIRED
+		date_birth CDATA #IMPLIED
+		date_death CDATA #IMPLIED
+		country CDATA #IMPLIED
+		gender (F | M | O) "O">
+
+<!ELEMENT books (book*)>
+<!ELEMENT book (title, edition?)>
+<!ATTLIST book 
+        isbn ID #REQUIRED
+		author_id IDREF #REQUIRED
+		co_author_id IDREFS #IMPLIED
+		n_pages CDATA #IMPLIED
+		pub_date CDATA #IMPLIED
+		genre (ACTION | HISTORY | ANTHOLOGY | CHILDREN |CLASSIC | COMIC | CRIME| DRAMA| FAIRYTALE | FANTASY | NOVEL | HORROR | MYSTERY | PARANORMAL | PICTUREBOOK | POETRY | THRILLER | ROMACE | SATIRE | SCI-FI | WESTERN | ART | AUTOBIOGRAPHY | BUSINESS | CRAFTS | DIARY | DICTIONARY | ENCYCLOPEDIA | GUIDE | HEALTH | HUMOR | JOURNAL | MATH | PHILOSOPHY| RELIGION | TEXTBOOK | SCIENCE | TRAVEL| SPORTS) #IMPLIED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+
+<!ELEMENT copies (copy*)>
+<!ELEMENT copy EMPTY>
+<!ATTLIST copy 
+        cop_id ID #REQUIRED
+        book_isbn IDREF #REQUIRED
+        pur_date CDATA #IMPLIED
+        price CDATA #IMPLIED>
+
+<!ELEMENT users (user*)>
+<!ELEMENT user (full_name, p_details)>
+<!ATTLIST user 
+	user_id ID #REQUIRED>
+	
+<!ELEMENT loans (loan*)>
+<!ELEMENT loan EMPTY>
+<!ATTLIST loan 
+	user_id IDREF #REQUIRED
+	cop_id IDREF #REQUIRED
+	loan_date CDATA #REQUIRED
+	return_date CDATA #IMPLIED>

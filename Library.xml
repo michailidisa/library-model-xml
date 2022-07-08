@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Libraries SYSTEM "Library.dtd">
+<Libraries>
+    <library library_id ="L1" phone="2310281111" email="library@ihu.edu.gr" library_address="14km Thesalloniki - Nea Moudania" >
+        <library_name> International University Library </library_name>
+        <personnel>
+            <employee em_id ="S1" em_category = "permanent">
+                <full_name> Eleni Rantou </full_name>
+                <p_details> 
+                    <gender gen="F"> 
+                    </gender>
+                    <full_address > 
+                        <address> Agias Paraskeuis </address>
+                        <number>3</number>
+                        <zip>56123</zip>
+                        <city>Thessaloniki</city>
+                    </full_address>
+                    <phone>231010101010</phone>
+                    <email>elenir@ihu.edu.gr</email>
+                    <date_of_birth>10-10-1980</date_of_birth>
+                    <maritial_status m_s="N"> </maritial_status>
+                    <children chil="Y"> </children>
+                </p_details>    
+            </employee>
+            <employee em_id ="S2" em_category="contractor">
+                <full_name> Kostas Kostou </full_name>
+            </employee>
+            <employee em_id ="S3" em_category = "contractor">
+                <full_name> Giorgos Georgiou </full_name>
+                <p_details> 
+                    <gender gen="M"> 
+                    </gender>
+                    <phone>231010101010</phone>
+                    <phone>6940111111</phone>
+                    <email>giorgosg@ihu.edu.gr</email>
+                </p_details>  
+            </employee>
+        </personnel>
+        <authors>
+            <author id="A0001" gender="M" country="France" date_birth="10-07-1871" date_death="18-10-1922">
+                <full_name>Marcel Proust</full_name>
+            </author>
+            <author id="A0002" gender="M" country="Greece">
+                <full_name>Aggelos Katsaggelos</full_name>
+            </author>
+            <author id="A0003" gender="M" country="England" date_birth="10-10-1951">
+                <full_name>Henry Jorth</full_name>
+            </author>
+            <author id="A0004" gender="F" country="Russia" date_birth="10-10-1951">
+                <full_name>Katerina Adam</full_name>
+            </author>
+            <author id="A0005" gender="F" country="USA" date_birth="12-05-1990">
+                <full_name>Sylvia Plath</full_name>
+            </author>
+        </authors>
+        <books>
+            <book isbn="I1234567891234" author_id="A0001" n_pages="500" genre="NOVEL">
+                <title>IN SEARCH OF LOST TIME</title>
+                <edition>1st</edition>
+            </book>
+            <book isbn="I1234567891235" author_id="A0001" n_pages="500" pub_date="20-10-1905" genre="NOVEL">
+                <title>IN SEARCH OF LOST TIME</title>
+                <edition>2nd</edition>
+            </book>
+            <book isbn="I9781108480712" author_id="A0002" co_author_id="A0003" n_pages="593" pub_date="20-07-2016" genre="SCIENCE">
+                <title>MACHINE LEARNING REFINED</title>
+                <edition>13th</edition>
+            </book>
+            <book isbn="I9781108485013" author_id="A0003" n_pages="603" genre="SCIENCE">
+                <title>DATABASE SYSTEM CONCEPTS</title>
+                <edition>7th</edition>
+            </book>
+            <book isbn="I9085304588012" author_id="A0004" n_pages="149" genre="POETRY">
+                <title>THE COLLECTED MISERY POEMS</title>
+            </book>
+            <book isbn="I9085304587013" author_id="A0005" co_author_id="A0004" n_pages="222" genre="CHILDREN">
+                <title>BLUES FOR A BLACK CAT</title>
+            </book>
+        </books>
+        <copies>
+            <copy cop_id="C001" book_isbn="I1234567891234" pur_date = "20-05-2012" price="50"/>
+            <copy cop_id="C002" book_isbn="I1234567891234" pur_date="12-10-2012" price="40"/>
+            <copy cop_id="C003" book_isbn="I9781108485013"/>
+            <copy cop_id="C004" book_isbn="I9085304588012" pur_date="13-10-2016" price="10"/>
+            <copy cop_id="C005" book_isbn="I9085304587013" pur_date="13-12-2017"/>
+            <copy cop_id="C006" book_isbn="I9781108480712" pur_date="12-10-2018" price="120"/>
+        </copies>
+        <users>
+            <user user_id="U0001">
+                <full_name>Alex Michailidis</full_name>
+                <p_details> 
+                    <gender gen="M"> 
+                    </gender>
+                    <full_address> 
+                        <address> Agias Paraskeuis</address>
+                        <number>3</number>
+                        <zip>56123</zip>
+                        <city>Thessaloniki</city>
+                    </full_address>
+                    <phone>6976153682</phone>
+                    <email>amichailidis@ihu.edu.gr</email>
+                    <date_of_birth>20-05-1995</date_of_birth>
+                </p_details>    
+            </user>
+            <user user_id="U0002">
+                <full_name>Korina Kout</full_name>
+                <p_details> 
+                    <gender gen="F"> 
+                    </gender>
+                    <full_address> 
+                        <address> Niarxou</address>
+                        <number>6</number>
+                        <zip>10211</zip>
+                        <city>Kalamta</city>
+                    </full_address>
+                    <phone>6972314151</phone>
+                    <email>kkoutela@ihu.edu.gr</email>
+                    <date_of_birth>15-03-1997</date_of_birth>
+                </p_details>    
+            </user>
+            <user user_id="U0003">
+                <full_name>Chrysa Dont</full_name>
+                <p_details> 
+                    <gender gen="F"> 
+                    </gender>
+                    <phone>2310725116</phone>
+                    <email>cdont@ihu.edu.gr</email>
+                </p_details>    
+            </user>
+            <user user_id="U0004">
+                <full_name>Christo Gour</full_name>
+                <p_details> 
+                    <gender gen="M"> 
+                    </gender>
+                    <phone>6988524231</phone>
+                    <email>cdgour@ihu.edu.gr</email>
+                </p_details>    
+            </user>
+        </users>
+        <loans>
+            <loan user_id="U0001" cop_id="C002" loan_date="20-02-2022" return_date="23-02-2022"/>
+            <loan user_id="U0001" cop_id="C002" loan_date="10-03-2022"/>
+            <loan user_id="U0002" cop_id="C003" loan_date="11-03-2022"/>
+            <loan user_id="U0002" cop_id="C004" loan_date="12-03-2022"/>
+            <loan user_id="U0004" cop_id="C006" loan_date="12-03-2022" return_date="22-03-2022"/>
+            <loan user_id="U0004" cop_id="C005" loan_date="12-03-2022"/>
+        </loans>
+    </library>
+    <library library_id="L2" phone="2310281112" email="library@uom.gr">
+        <library_name>University of Macedonia Library</library_name>
+    </library>
+</Libraries>
